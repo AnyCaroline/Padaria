@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+</head>
+
+<body>
+    <main>
+        <h1>Feedback</h1>
+
+        <form action="processar" method="get" id="form">
+            <fieldset>
+                <legend>Informações</legend><br>
+
+
+                <!-- Campo nome -->
+                <label for="nome">Nome completo</label>
+                <input type="text" id="nome" name="nome" placeholder="Nome Completo"><br><br>
+               
+                <!-- Campo email -->
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="exemplo@dominio.com" minlength="10"
+                    maxlength="50"><br><br>
+
+        
+                <!-- Campo com select para o produtio -->
+                <label for="sabor">Selecione o produto: </label>
+                <select id="sabor" required>
+                    <option value="">--Selecione--</option>
+                    <option value="pao">Pães</option>
+                    <option value="bolo">Bolo</option>
+                    <option value="torta">Torta</option>
+                    <option value="doce">Doces</option>
+                    <option value="salgado">Salgados</option>
+                </select><br><br>
+                <p>Adicione sua avaliação</p>
+                <input type="radio" id="exce" name="exce" value="exce">
+                <label for="exce">Excelente</label>
+
+                <input type="radio" id="bom" name="bom" value="bom">
+                <label for="bom">Bom</label>
+
+                <input type="radio" id="reg" name="reg" value="reg">
+                <label for="reg">Regular</label>
+
+                <input type="radio" id="ruim" name="ruim" value="ruim">
+                <label for="ruim">Ruim</label><br><br>
+            </fieldset>
+            <br><br>
+
+
+            <input type="submit" value="Enviar dados">
+
+            <input type="reset" value="Limpar formulario">
+
+            <input type="button" value="Clique aqui" onclick="alert ('Você clicou!')"><br><br>
+
+            <a href="C:\DEV\Padaria\index.html">Pagina Inicial</a>
+
+
+
+        </form>
+    </main>
+</body>
+
+</html>

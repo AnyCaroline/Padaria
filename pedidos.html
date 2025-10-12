@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedidos</title>
+</head>
+
+<body>
+    <main>
+        <h1>Pedido</h1>
+
+        <form action="processar" method="get" id="form">
+            <fieldset>
+                <legend>Informações Pessoais</legend><br>
+
+
+                <!-- Campo nome -->
+                <label for="nome">Nome completo</label>
+                <input type="text" id="nome" name="nome" placeholder="Nome Completo" required><br><br>
+                <!-- Campo telefone -->
+                <label for="telefone">Telefone (formato:9999-9999)</label>
+                <input type="text" id="telefone" name="telefone" pattern="[0-9]{4}-[0-9]{4}"
+                    placeholder="Ex: 9999-9999"><br><br>
+                <!-- Campo email -->
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="exemplo@dominio.com" minlength="10"
+                    maxlength="50" required><br><br>
+            </fieldset>
+            <fieldset>
+                <legend>Produto</legend>
+                <p>Escolha seu produto</p>
+                <input type="radio" id="bolo" name="bolo" value="bolo">
+                <label for="bolo">Bolo</label>
+
+                <input type="radio" id="torta" name="torta" value="torta">
+                <label for="torta">Torta</label>
+
+                <input type="radio" id="salgado" name="salgado" value="salgado">
+                <label for="salgado">Salgados</label>
+
+                <input type="radio" id="doce" name="doce" value="doce">
+                <label for="doce">Doce</label>
+
+                <br><br>
+                <!-- Campo com select para o sabor -->
+                <label for="sabor">Selecione o sabor: </label>
+                <select id="sabor">
+                    <option value="chocolate">Chocolate</option>
+                    <option value="dleite">Doce de Leite</option>
+                    <option value="morango">Morango</option>
+                    <option value="creme">Creme</option>
+                    <option value="frango">Frango com Catupiry</option>
+                    <option value="carne">Carne</option>
+                    <option value="Presque">Presunto e Queijo</option>
+
+                </select><br><br>
+                <p>Escolha o tamanho</p>
+                <input type="radio" id="pequeno" name="pequeno" value="pequeno">
+                <label for="pequeno">Pequeno</label>
+
+                <input type="radio" id="medio" name="medio" value="medio">
+                <label for="medio">Medio</label>
+
+                <input type="radio" id="grande" name="grande" value="grande">
+                <label for="grande">Grande</label><br><br>
+
+                <label for="dataent">Data de Entrega</label>
+                 <input type="date" id="dataent" name="dataent]"><br><br>
+
+                <label for="obs">Observações:</label><br>
+                <textarea id="obs" rows="10" required></textarea><br><br>
+
+                   <!-- Campo data de orçamento -->
+                 <label for="orc">Orçamento máximo:</label>
+                 <input type="number" id="orc" name="orc"><br><br>
+
+
+            </fieldset>
+            <br><br>
+
+
+            <input type="submit" value="Enviar dados">
+
+            <input type="reset" value="Limpar formulario">
+
+            <input type="button" value="Clique aqui" onclick="alert ('Você clicou!')"><br><br>
+
+            <a href="C:\DEV\Padaria\index.html">Pagina Inicial</a>
+
+
+
+        </form>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+
+<body>
+    <main>
+        <h1>Cadastro de usuário</h1>
+
+        <form action="processar" method="get" id="form">
+            <fieldset>
+                <legend>Informações Pessoais</legend>
+
+
+                <!-- Campo nome -->
+                <label for="nome">Nome completo</label>
+                <input type="text" id="nome" name="nome" placeholder="Nome Completo" required><br><br>
+
+                <!-- Campo email -->
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="exemplo@dominio.com" minlength="10"
+                    maxlength="50" required><br><br>
+
+                <!-- Campo telefone -->
+                <label for="telefone">Telefone (formato:9999-9999)</label>
+                <input type="text" id="telefone" name="telefone" pattern="[0-9]{4}-[0-9]{4}" placeholder="Ex: 9999-9999"
+                    required><br><br>
+
+                <!-- Campo data de nascimento -->
+                <label for="dataNasc">Data de Nascimento</label>
+                <input type="date" id="dataNasc" name="dataNasc"><br><br>
+
+            </fieldset><br>
+            <fieldset>
+                <legend>Dados residênciais</legend>
+                <!-- Campo endereço -->
+                <label for="end">Rua</label>
+                <input type="text" id="end" name="end" required><br><br>
+
+
+                <!-- Campo data de numero -->
+                <label for="num">Número </label>
+                <input type="number" id="num" name="num" required><br><br>
+
+
+                <label for="bai">Bairro</label>
+                <input type="text" id="bai" name="bai" required><br><br>
+
+                <!-- Campo CEP -->
+                <label for="cep">CEP</label>
+                <input type="text" id="cep" name="cep" pattern="[0-9]{4}-[0-9]{4}" placeholder="Ex:12345-678" required>
+
+            </fieldset>
+
+            <br><br>
+            <fieldset>
+                <legend>Preferências</legend>
+                <form action="processar" method="get">
+
+                    <p>Selecione seus produtos favoritos</p>
+                    <input type="checkbox" id="fav" name="fav" value="fav">
+                    <label for="fav">Bolos</label>
+
+                    <input type="checkbox" id="fav" name="fav" value="fav">
+                    <label for="fav">Pães</label>
+
+                    <input type="checkbox" id="fav" name="fav" value="fav">
+                    <label for="fav">Doces</label>
+
+                    <input type="checkbox" id="fav" name="fav" value="fav">
+                    <label for="fav">Tortas</label>
+
+                    <input type="checkbox" id="fav" name="fav" value="fav">
+                    <label for="fav">Salgados</label> <br><br>
+
+                    <p>Você aceita receber promoções por email? </p>
+
+                    <input type="checkbox" id="sim" name="sim" value="sim">
+                    <label for="sim">Sim</label>
+
+                    <input type="checkbox" id="nao" name="nao" value="nao">
+                    <label for="nao">Não</label> <br><br>
+
+            </fieldset>
+            <br><br>
+
+            <input type="checkbox" id="termo" name="termo" value="termo">
+            <label for="termo">Aceito os termos de uso</label>
+            <br><br>
+
+            <!-- Campo de botões -->
+          
+             
+
+                <input type="submit" value="Enviar dados">
+
+                <input type="reset" value="Limpar formulario">
+
+                <input type="button" value="Clique aqui" onclick="alert ('Você clicou!')"> <br><br>
+
+                <a href="C:\DEV\Padaria\index.html">Pagina Inicial</a>
+
+          
+
+        </form>
+    </main>
+</body>
+
+</html>

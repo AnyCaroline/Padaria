@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Padaria da vovó</title>
+</head>
+
+<body>
+    <main>
+        <h1>Cadastro de usuário</h1>
+
+        <form action="processar" method="get" id="form">
+            <fieldset>
+                <legend>Informações Pessoais</legend><br>
+
+
+                <!-- Campo nome -->
+                <label for="nome">Nome completo</label>
+                <input type="text" id="nome" name="nome" placeholder="Nome Completo" required><br><br>
+
+                <!-- Campo email -->
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="exemplo@dominio.com" minlength="10"
+                    maxlength="50" required><br><br>
+
+                <!-- Campo com select para o assunto -->
+                <label for="assunto">Selecione o assunto: </label>
+                <select id="assunto">
+                    <option value="">--Selecione--</option>
+                    <option value="sugestao">Sugestão</option>
+                    <option value="reclamacao">Reclamação</option>
+                    <option value="elogio">Elogio</option>
+
+                </select><br><br>
+
+
+                <label for="msg">Mensagem:</label><br>
+                <textarea id="msg" rows="10" required></textarea><br><br>
+
+
+                <label for="telefone">Telefone (formato:9999-9999)</label>
+                <input type="text" id="telefone" name="telefone" pattern="[0-9]{4}-[0-9]{4}"
+                    placeholder="Ex: 9999-9999">
+
+            </fieldset>
+            <br><br>
+
+
+            <input type="submit" value="Enviar dados">
+
+            <input type="reset" value="Limpar formulario">
+
+            <input type="button" value="Clique aqui" onclick="alert ('Você clicou!')"><br><br>
+
+            <a href="C:\DEV\Padaria\index.html">Pagina Inicial</a>
+
+
+
+        </form>
+    </main>
+</body>
+
+</html>
