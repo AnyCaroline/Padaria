@@ -4,10 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pedidos</title>
+    <meta name="description" content="Padaria da Vovó: o aconchego do pão caseiro feito com amor.">
+    <title>Padaria da vovó</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <header class="topo">
+        <div class="conteudo-topo">
+            <h1>Padaria da vovó</h1>
+            <img src="./Imagens/logo.png" alt="Logo Padaria da Vovó" class="logo">
+            <nav>
+                <a href="./index.html">Inicio</a>
+                <a href="./cadastro.html">Cadastro de usuário</a>
+                <a href="./contato.html">Contato</a>
+                <a href="./feedback.html">Feedback</a>
+            </nav>
+        </div>
+    </header>
+
     <main>
         <h1>Pedido</h1>
 
@@ -67,14 +82,14 @@
                 <label for="grande">Grande</label><br><br>
 
                 <label for="dataent">Data de Entrega</label>
-                 <input type="date" id="dataent" name="dataent]"><br><br>
+                <input type="date" id="dataent" name="dataent]"><br><br>
 
                 <label for="obs">Observações:</label><br>
                 <textarea id="obs" rows="10" required></textarea><br><br>
 
-                   <!-- Campo data de orçamento -->
-                 <label for="orc">Orçamento máximo:</label>
-                 <input type="number" id="orc" name="orc"><br><br>
+                <!-- Campo data de orçamento -->
+                <label for="orc">Orçamento máximo:</label>
+                <input type="number" id="orc" name="orc"><br><br>
 
 
             </fieldset>
@@ -87,12 +102,34 @@
 
             <input type="button" value="Clique aqui" onclick="alert ('Você clicou!')"><br><br>
 
-            <a href="C:\DEV\Padaria\index.html">Pagina Inicial</a>
-
+            <a href="./index.html">Pagina Inicial</a>
 
 
         </form>
     </main>
+       <footer class="footer">
+  <div class="footer-container">
+    <div class="footer-logo">
+      <img src="./Imagens/logo.png" alt="Logo Padaria da Vovó">
+      <p>Aconchego do pão caseiro feito com amor desde 1992.</p>
+    </div>
+    <div class="footer-contato">
+      <h4>Contato</h4>
+      <p class="rodape">📍Rua: João de Barros, 105 - Centro</p>
+      <p class="rodape">📞 (11) 99999-9999</p>
+      <p class="rodape">📧 contato@padariadavovo.com</p>
+    </div>
+
+    <div class="footer-redes">
+      <h4>Siga-nos</h4>
+      <a href="#">Instagram</a><br>
+      <a href="#">Facebook</a><br>
+      <a href="#">WhatsApp</a>
+    </div>
+  </div>
+
+  <p class="footer-copy">© 2025 Padaria da Vovó - Todos os direitos reservados</p>
+</footer>
 </body>
 
 </html>
