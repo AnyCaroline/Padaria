@@ -1,3 +1,4 @@
+ /* Estilização do footer */
 .topo {
   background-color: #2A7C82;
   color: #fff;
@@ -24,8 +25,6 @@ nav a {
 nav a:hover {
   color: #F3C47C; /* tom de pão quentinho */
 }
-
-
 
 .footer {
   background-color: #2A7C82; /* Azul da logo */
@@ -77,6 +76,7 @@ nav a:hover {
   font-size: 13px;
   color: #e0e0e0;
 }
+
 
 /* === ESTILO GERAL === */
 body {
@@ -245,10 +245,25 @@ td {
   color: #444;
 }
 
+.btn {
+  display: inline-block;
+  padding: 6px 12px;
+  background-color: #2a7c82;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  margin: 2px;
+  transition: 0.3s;
+}
+.btn:hover {
+  background-color: #fffaf5;
+}
+
 /* === BORDAS === */
 table, th, td {
   border: none;
 }
+
 
 /* === TÍTULO DO CARDÁPIO === */
 h2 {
