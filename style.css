@@ -1,81 +1,114 @@
- /* Estilização do footer */
+/* Header fixo no topo */
 .topo {
-  background-color: #2A7C82;
-  color: #fff;
-  padding: 10px 0;
+  position: fixed;         /* mantém fixo */
+  top: 0;                  /* cola no topo */
+  left: 0;
+  width: 100%;             /* ocupa toda a largura */
+
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* sombra suave */
+  z-index: 1000;           /* fica acima do conteúdo */
 }
 
+/* Ajuste do conteúdo interno */
 .conteudo-topo {
   display: flex;
-  justify-content: space-around;
   align-items: center;
+  justify-content: space-between;
+  padding: 10px 40px;
 }
 
-.logo {
-  height: 150px;
+/* Corrige o conteúdo que ficaria escondido atrás do header */
+body {
+  padding-top: 120px; /* ajusta conforme a altura do seu header */
+}
+/* Layout básico */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #00796b;
+  padding: 15px 30px;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
 }
 
-nav a {
-  color: #fff;
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav a {
+  color: white;
   text-decoration: none;
-  margin: 0 15px;
   font-weight: bold;
 }
 
-nav a:hover {
-  color: #F3C47C; /* tom de pão quentinho */
+/* MENU */
+/* Botão do menu */
+/* Botão do menu (hambúrguer) */
+.menu-toggle {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 28px;
+  cursor: pointer;
+  z-index: 1001; /* acima do menu */
+  transition: transform 0.3s ease;
 }
 
-.footer {
-  background-color: #2A7C82; /* Azul da logo */
-  color: #fff;
-  padding: 40px 0 20px;
-  text-align: center;
-  font-family: Arial, sans-serif;
+/* Ícone muda quando o menu está ativo */
+.menu-toggle.active::before {
+  content: "✖"; /* X para fechar */
+}
+.menu-toggle::before {
+  content: "☰"; /* Ícone padrão */
 }
 
-.footer-container {
+/* Estilos do menu lateral */
+.menu {
+  position: fixed;
+  top: 0;
+  left: -250px; /* começa escondido */
+  width: 250px;
+  height: 100%;
+  background-color: #367d7d;
   display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  gap: 30px;
-  max-width: 1000px;
-  margin: 0 auto 20px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: left 0.3s ease;
+  z-index: 1000;
 }
 
-.footer-logo img {
-  width: 100px;
-  margin-bottom: 10px;
+/* Quando ativo */
+.menu.active {
+  left: 0; /* aparece */
 }
 
-.footer-logo p {
-  max-width: 250px;
-  font-size: 14px;
-  color: #f0f0f0;
-}
-
-.footer h4 {
-  color: #F3C47C; /* tom bege da logo */
-  margin-bottom: 10px;
-}
-
-.footer a {
-  color: #fff;
+/* Itens do menu */
+.menu a {
+  color: white;
   text-decoration: none;
+  font-weight: bold;
+  margin: 20px 0;
+  display: block;
+  transition: color 0.2s;
 }
 
-.footer a:hover {
-  color: #F3C47C;
+.menu a:hover {
+  color: #ffd700;
 }
 
-.footer-copy {
-  border-top: 1px solid #ffffff33;
-  margin-top: 20px;
-  padding-top: 10px;
-  font-size: 13px;
-  color: #e0e0e0;
-}
+
+
 
 
 /* === ESTILO GERAL === */
@@ -107,6 +140,58 @@ main h1 {
 .rodape{
   color:white;
 }
+
+/* HERO */
+.hero {
+  height: 85vh;
+  background:
+    linear-gradient(rgba(44, 119, 113, 0.75), rgba(44, 119, 113, 0.55)),
+    url('./Imagens/hero.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  padding: 0 20px;
+  font-family: 'Poppins', sans-serif;
+  margin-top: 120px; /* ajusta o espaço abaixo do header fixo */
+}
+
+
+
+.hero-content {
+  max-width: 750px;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+}
+
+.hero p {
+  color: white;
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.btn-hero {
+  background-color: #f4b183;
+  color: white;
+  padding: 14px 35px;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-hero:hover {
+  background-color: #e89b61;
+  transform: scale(1.05);
+}
+
 
 /* === FORMULÁRIO === */
 form {
@@ -370,3 +455,240 @@ h2 {
   border-radius: 15px; /* bordas arredondadas */
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* sombra leve */
 }
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+}
+
+
+/* botão flutuante do whatsapp */
+
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 90px;
+  right: 20px;
+  background-color: #25D366;
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  background-color: #20b558;
+}
+
+.whatsapp-icon {
+  width: 35px;
+  height: 35px;
+  filter: invert(1);
+}
+
+/* bagge para novo produto /promoção */
+.badge-novo {
+  background-color: #2a7c82; 
+  color: #fff;
+  font-size: 0.7em;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 12px;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
+.badge-promo {
+  background-color: red; 
+  color: #fff;
+  font-size: 0.7em;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 12px;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
+/* Botao voltar ao inicio */
+#btnTopo {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #d2691e; /* cor do botão */
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 12px 16px;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  display: none; /* começa invisível */
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+#btnTopo:hover {
+  background-color: #a0522d; /* cor mais escura no hover */
+  transform: scale(1.1);
+}
+
+
+
+/* Fundo escuro */
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 900;
+}
+
+/* Janela do modal */
+.modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  z-index: 1000;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Quando ativo */
+.modal.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* Imagem dentro do modal */
+.modal img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+}
+
+/* Botão de fechar */
+.fechar {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 30px;
+  color: #555;
+  cursor: pointer;
+}
+
+.galeria img {
+  width: 200px;
+  height: 200px;
+  margin: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.galeria img:hover {
+  transform: scale(1.05);
+}
+
+
+ /* Estilização do footer */
+.topo {
+  background-color: #2A7C82;
+  color: #fff;
+  padding: 10px 0;
+}
+
+.conteudo-topo {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.logo {
+  height: 150px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #F3C47C; /* tom de pão quentinho */
+}
+
+.footer {
+  background-color: #2A7C82; /* Azul da logo */
+  color: #fff;
+  padding: 40px 0 20px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto 20px;
+}
+
+.footer-logo img {
+  width: 100px;
+  margin-bottom: 10px;
+}
+
+.footer-logo p {
+  max-width: 250px;
+  font-size: 14px;
+  color: #f0f0f0;
+}
+
+.footer h4 {
+  color: #F3C47C; /* tom bege da logo */
+  margin-bottom: 10px;
+}
+
+.footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #F3C47C;
+}
+
+.footer-copy {
+  border-top: 1px solid #ffffff33;
+  margin-top: 20px;
+  padding-top: 10px;
+  font-size: 13px;
+  color: #e0e0e0;
+}
+

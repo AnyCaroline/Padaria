@@ -10,18 +10,23 @@
 </head>
 
 <body>
-    <header class="topo">
-        <div class="conteudo-topo">
-            <h1>Padaria da vovó</h1>
-            <img src="./Imagens/logo.png" alt="Logo Padaria da Vovó" class="logo">
-            <nav>
-                <a href="./cadastro.html">Cadastro de usuário</a>
-                <a href="./pedidos.html">Pedidos</a>
-                <a href="./contato.html">Contato</a>
-                <a href="./feedback.html">Feedback</a>
-            </nav>
+  
+    <div id="header"></div>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>O cheirinho de pão quentinho da vovó te espera!</h1>
+            <p>Receitas caseiras, carinho em cada fornada e aquele sabor de infância que aquece o coração.</p>
+            <a href="#cardapio" class="btn-hero">Ver Cardápio</a>
         </div>
-    </header>
+    </section>
+
+    <!-- Botão Flutuante WhatsApp -->
+    <a href="https://wa.me/5599999999999" class="whatsapp-float" target="_blank" title="Fale conosco no WhatsApp">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="WhatsApp"
+            class="whatsapp-icon">
+    </a>
+
 
 
     <section>
@@ -241,7 +246,7 @@
             <li>Pão francês</li>
             <li>Pão de leite</li>
             <li>Pão de forma caseiro</li>
-            <li>Pão de batata</li>
+            <li>Pão de batata <span class="badge-novo">Novo</span></li>
             <li>Pão sovado</li>
         </ul>
 
@@ -252,7 +257,7 @@
             <li>Sonho com creme ou doce de leite</li>
             <li>Bomba de chocolate</li>
             <li>Bolos caseiros (fubá, cenoura com chocolate, laranja, chocolate)</li>
-            <li>Pudim</li>
+            <li>Pudim <span class="badge-promo">Promoção</span></li>
             <li>Quindim</li>
             <li>Coxinha</li>
             <li>Esfirra (aberta e fechada)</li>
@@ -261,6 +266,8 @@
         </ol>
     </section>
 
+
+    <!-- Galeria de fotos -->
     <h2 class="index">Galeria de fotos</h2>
     <div class="galeria">
         <img src="./Imagens/bolos.png" alt="Bolos">
@@ -269,36 +276,26 @@
         <img src="./Imagens/vitrine_paes.png" alt="Vitrine de Pães">
         <img src="./Imagens/vitrine-doces.png" alt="Vitrine de Doces">
     </div>
+
+    <!-- Modal e overlay -->
+<div class="overlay" id="overlay"></div>
+<div class="modal" id="modal">
+  <span class="fechar" id="fecharModal">&times;</span>
+  <img id="modalImg" src="" alt="Imagem ampliada">
+  <p id="modalLegenda"></p>
+</div>
+ 
+
     <!-- Adição video institucional -->
     <h2 class="index">Apresentação do seu novo lugar favorito</h2>
     <video class="video" controls>
         <source src="./Video/apresentacao.mp4" type="video/mp4">
     </video>
     </section>
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-logo">
-                <img src="./Imagens/logo.png" alt="Logo Padaria da Vovó">
-                <p>Aconchego do pão caseiro feito com amor desde 1992.</p>
-            </div>
+     <div id="footer"></div>
+    <button id="btnTopo" title="Voltar ao topo">↑</button>
 
-            <div class="footer-contato">
-                <h4>Contato</h4>
-                <p class="rodape">📍Rua: João de Barros, 105 - Centro</p>
-                <p class="rodape">📞 (11) 99999-9999</p>
-                <p class="rodape">📧 contato@padariadavovo.com</p>
-            </div>
-
-            <div class="footer-redes">
-                <h4>Siga-nos</h4>
-                <a href="#">Instagram</a><br>
-                <a href="#">Facebook</a><br>
-                <a href="#">WhatsApp</a>
-            </div>
-        </div>
-
-        <p class="footer-copy">© 2025 Padaria da Vovó - Desenvolvido por Any Caroline</p>
-    </footer>
+    <script src="script.js"></script>
 
 </body>
 
