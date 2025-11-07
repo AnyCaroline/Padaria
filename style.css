@@ -1,6 +1,6 @@
 /* Header fixo no topo */
 .topo {
-  position: fixed;         /* mantém fixo */
+  position: absolute;         /* mantém fixo */
   top: 0;                  /* cola no topo */
   left: 0;
   width: 100%;             /* ocupa toda a largura */
@@ -17,10 +17,6 @@
   padding: 10px 40px;
 }
 
-/* Corrige o conteúdo que ficaria escondido atrás do header */
-body {
-  padding-top: 120px; /* ajusta conforme a altura do seu header */
-}
 /* Layout básico */
 .header {
   display: flex;
@@ -108,19 +104,18 @@ body {
 }
 
 
-
-
-
 /* === ESTILO GERAL === */
 body {
   font-family: 'Times New Roman', Times, serif;
   color: #333;
   margin: 0;
   padding: 0;
+   padding-top: 170px;
 }
 .index{
   color: black;
   text-align: center;
+  
 }
 main {
   max-width: 700px;
@@ -156,8 +151,6 @@ main h1 {
   font-family: 'Poppins', sans-serif;
   margin-top: 120px; /* ajusta o espaço abaixo do header fixo */
 }
-
-
 
 .hero-content {
   max-width: 750px;
@@ -283,168 +276,6 @@ input[type="radio"] {
   margin-right: 6px;
 }
 
-/* === TABELA DE CARDÁPIO === */
-table {
-  width: 90%;
-  margin: 40px auto;
-  border-collapse: collapse;
-  font-family: "Poppins", Arial, sans-serif;
-  background-color: #fffaf5; /* tom suave bege */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  border-radius: 12px;
-  overflow: hidden;
-}
-
-thead {
-  background-color: #2a7c82; /* azul da logo */
-  color: white;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-th, td {
-  padding: 15px 20px;
-  text-align: left;
-}
-
-tbody tr:nth-child(even) {
-  background-color: #f7e4c2; /* bege claro */
-}
-
-tbody tr:nth-child(odd) {
-  background-color: #fff;
-}
-
-tbody tr:hover {
-  background-color: #e0f2f1; /* destaque leve ao passar o mouse */
-  transition: 0.3s ease;
-}
-
-th {
-  font-size: 16px;
-  font-weight: 700;
-}
-
-td {
-  font-size: 15px;
-  color: #444;
-}
-
-.btn {
-  display: inline-block;
-  padding: 6px 12px;
-  background-color: #2a7c82;
-  color: white;
-  text-decoration: none;
-  border-radius: 6px;
-  margin: 2px;
-  transition: 0.3s;
-}
-.btn:hover {
-  background-color: #fffaf5;
-}
-
-/* === BORDAS === */
-table, th, td {
-  border: none;
-}
-
-
-/* === TÍTULO DO CARDÁPIO === */
-h2 {
-  text-align: center;
-  color: #2a7c82;
-  margin-top: 50px;
-  font-size: 28px;
-  font-weight: 700;
-}
-/* === SEÇÃO DE PRODUTOS === */
-.produtos {
-  max-width: 900px;
-  margin: 60px auto;
-  background-color: #fffaf5; /* fundo bege suave */
-  padding: 40px;
-  border-radius: 15px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  font-family: "Poppins", Arial, sans-serif;
-}
-
-.produtos h2.index {
-  text-align: center;
-  color: #2a7c82; /* azul da logo */
-  font-size: 28px;
-  margin-bottom: 20px;
-}
-
-.produtos h3 {
-  color: #b86b2c; /* tom dourado/pão */
-  margin-top: 20px;
-  font-size: 22px;
-  border-bottom: 2px solid #2a7c82;
-  display: inline-block;
-  padding-bottom: 5px;
-}
-
-.produtos ul,
-.produtos ol {
-  margin: 20px 0;
-  padding-left: 40px;
-}
-
-.produtos li {
-  font-size: 17px;
-  margin-bottom: 10px;
-  color: #333;
-  position: relative;
-  padding-left: 10px;
-}
-
-/* Marcadores personalizados */
-.produtos ul li::before {
-  content: "🍞";
-  position: absolute;
-  left: -25px;
-}
-
-.produtos ol li::before {
-  content: "🍰";
-  position: absolute;
-  left: -25px;
-}
-
-/* Efeito de hover */
-.produtos li:hover {
-  color: #2a7c82;
-  transform: translateX(5px);
-  transition: 0.5s ease;
-}
-
-/* === GALERIA DE IMAGENS === */
-.galeria {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px; /* espaço entre as imagens */
-  margin: 15px auto;
-  padding: 20px;
-  border-radius: 15px;
-  max-width: 1500px;
-}
-
-.galeria img {
-  width: 200px;
-  height: 200px;
-  border-radius: 12px;
-  object-fit: cover;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
-}
-
-/* EFEITO HOVER */
-.galeria img:hover {
-  transform: scale(1.08);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-}
 
 /* video */
 .video {
@@ -456,17 +287,64 @@ h2 {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* sombra leve */
 }
 
-/* Reset básico */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* === Carrossel === */
+.carousel {
+  position: relative;
+  width: 90%;
+  max-width: 900px;
+  margin: 30px auto;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-body {
-  font-family: "Poppins", sans-serif;
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  flex-shrink: 0;
+  border-radius: 20px;
+}
+
+/* Botões de navegação */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  color: #5b3b1e; /* marrom da padaria */
+  font-size: 24px;
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.carousel-btn:hover {
+  background-color: #5b3b1e;
   color: #fff;
 }
+
+.carousel-btn.prev {
+  left: 10px;
+}
+
+.carousel-btn.next {
+  right: 10px;
+}
+
+/* Hover leve nas imagens */
+.carousel img:hover {
+  transform: scale(1.03);
+  transition: transform 0.4s ease;
+}
+
 
 
 /* botão flutuante do whatsapp */
@@ -582,12 +460,7 @@ body {
   transform: translate(-50%, -50%) scale(1);
 }
 
-/* Imagem dentro do modal */
-.modal img {
-  width: 100%;
-  max-width: 400px;
-  border-radius: 10px;
-}
+
 
 /* Botão de fechar */
 .fechar {
@@ -599,25 +472,12 @@ body {
   cursor: pointer;
 }
 
-.galeria img {
-  width: 200px;
-  height: 200px;
-  margin: 15px;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-
-.galeria img:hover {
-  transform: scale(1.05);
-}
-
-
  /* Estilização do footer */
 .topo {
   background-color: #2A7C82;
   color: #fff;
   padding: 10px 0;
+
 }
 
 .conteudo-topo {
@@ -647,6 +507,7 @@ nav a:hover {
   padding: 40px 0 20px;
   text-align: center;
   font-family: Arial, sans-serif;
+  margin-top: 50px;
 }
 
 .footer-container {
@@ -692,3 +553,174 @@ nav a:hover {
   color: #e0e0e0;
 }
 
+/* Cardápio */
+/* ===== Título do cardápio ===== */
+.titulo-cardapio {
+  text-align: center;
+  color: #4b3b2a;
+  margin: 30px 0 10px;
+  font-size: 1.8rem;
+}
+
+/* ===== Container geral ===== */
+.menu-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px 40px;
+}
+
+/* ===== Categorias ===== */
+.categoria h3 {
+  color: #2e4e2e;
+  margin-bottom: 10px;
+  border-left: 5px solid #8c6b4f;
+  padding-left: 10px;
+}
+
+/* ===== Grid de cards ===== */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 18px;
+}
+
+/* ===== Card ===== */
+.card {
+  background-color: #fffaf2;
+  border: 1px solid #e6d8c3;
+  border-radius: 15px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 10px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== Imagem ===== */
+.card img {
+  width: 100%;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+/* ===== Títulos e texto ===== */
+.card h4 {
+  margin: 5px 0;
+  font-size: 1rem;
+  color: #3a2a1a;
+}
+
+.card p {
+  font-size: 0.85rem;
+  color: #5a4b3a;
+  margin-bottom: 8px;
+}
+
+/* ===== Preço ===== */
+.preco {
+  display: block;
+  font-weight: bold;
+  color: #2e4e2e;
+  margin-bottom: 10px;
+}
+
+/* ===== Botões ===== */
+.botoes {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+}
+
+.btn {
+  background-color: #2A7C82;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background-color: #c9a97b;
+}
+
+.btn.secundario {
+  background-color: #c9a97b;
+}
+
+.btn.secundario:hover {
+  background-color: #2A7C82
+}
+/* ===== Responsivo ===== */
+@media (max-width: 600px) {
+  .cards {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+
+  .card img {
+    height: 110px;
+  }
+
+  .card p {
+    font-size: 0.8rem;
+  }
+
+  .btn {
+    padding: 4px 8px;
+    font-size: 0.8rem;
+  }
+}
+
+/* === Horário de funcionamento === */
+.horario-container {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+.tabela-horarios {
+  width: 90%;
+  max-width: 900px;
+  border-collapse: collapse;
+  background-color: #f9f6ef; /* bege claro */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+}
+
+.tabela-horarios thead {
+  background-color: #5b3b1e; /* marrom */
+  color: #fff;
+}
+
+.tabela-horarios th, 
+.tabela-horarios td {
+  padding: 14px 10px;
+  border: 1px solid #d9c8a9;
+}
+
+.tabela-horarios tbody tr:nth-child(even) {
+  background-color: #f1ede3;
+}
+
+.tabela-horarios tbody tr:hover {
+  background-color: #e6dac4;
+  transition: background-color 0.3s ease;
+}
+
+/* Título */
+.index {
+  text-align: center;
+  font-size: 1.8em;
+  color: #5b3b1e;
+  margin-bottom: 20px;
+}

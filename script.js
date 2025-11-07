@@ -64,23 +64,6 @@ btnTopo.addEventListener("click", function () {
   });
 });
 
-// === GALERIA E MODAL ===
-const imagens = document.querySelectorAll(".galeria img");
-const modal = document.getElementById("modal");
-const overlay = document.getElementById("overlay");
-const modalImg = document.getElementById("modalImg");
-const modalLegenda = document.getElementById("modalLegenda");
-const fecharModal = document.getElementById("fecharModal");
-
-imagens.forEach((img) => {
-  img.addEventListener("click", () => {
-    modalImg.src = img.src;
-    modalLegenda.textContent = img.alt;
-    modal.style.display = "block";
-    overlay.style.display = "block";
-    modal.classList.add("active");
-  });
-});
 
 function fechar() {
   modal.style.display = "none";
@@ -89,3 +72,49 @@ function fechar() {
 
 fecharModal.addEventListener("click", fechar);
 overlay.addEventListener("click", fechar);
+
+
+// Monta o header dinamicamente
+document.getElementById("header").innerHTML = `
+  <h1>Padaria da Vovó</h1>
+  <div class="category-buttons">
+    <button class="active" onclick="filtrar('todos')">Todos</button>
+    <button onclick="filtrar('Salgados')">Salgados</button>
+    <button onclick="filtrar('Doces')">Doces</button>
+  </div>
+`;
+
+// Monta o footer
+document.getElementById("footer").innerHTML = `
+  <p>© 2025 Padaria da Vovó — Sabor com tradição!</p>
+`;
+
+
+// ----- CARROSSEL -----
+// === Carrossel ===
+const track = document.querySelector('.carousel-track');
+const images = document.querySelectorAll('.carousel img');
+const nextButton = document.querySelector('.carousel-btn.next');
+const prevButton = document.querySelector('.carousel-btn.prev');
+
+let currentIndex = 0;
+
+function updateCarousel() {
+  track.style.transform = `translateX(-${currentIndex * 100}%)`;
+}
+
+nextButton.addEventListener('click', () => {
+  currentIndex = (currentIndex + 1) % images.length;
+  updateCarousel();
+});
+
+prevButton.addEventListener('click', () => {
+  currentIndex = (currentIndex - 1 + images.length) % images.length;
+  updateCarousel();
+});
+
+// Troca automática a cada 4s
+setInterval(() => {
+  currentIndex = (currentIndex + 1) % images.length;
+  updateCarousel();
+}, 4000);
