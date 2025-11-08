@@ -717,58 +717,86 @@ nav a:hover {
   transition: background-color 0.3s ease;
 }
 
-/* Título */
-.index {
+
+
+    /* ===== Estilos exclusivos da página Nossa História ===== */
+
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #fdf8f2; /* bege claro */
+  color: #3e2723;
+}
+
+/* Espaço pro header fixo */
+.historia-wrapper {
+  padding-top: 120px;
+  padding-bottom: 80px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Bloco principal */
+.historia-box {
+  max-width: 900px;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e0c8a5;
+  animation: fadeIn 0.7s ease;
+}
+
+/* Títulos */
+.historia-titulo {
+  color: #4a7c59; /* verde da logo */
   text-align: center;
-  font-size: 1.8em;
-  color: #5b3b1e;
+  font-size: 1.9rem;
+  margin-top: 0;
   margin-bottom: 20px;
+  position: relative;
+}
+
+/* Linha decorativa abaixo do título */
+.historia-titulo::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: #c49b66; /* marrom claro */
+  margin: 10px auto 25px;
+  border-radius: 5px;
+}
+
+/* Texto */
+.historia-box p {
+  text-align: justify;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 35px;
 }
 
 
- section {
-      max-width: 900px;
-      margin: 60px auto;
-      background-color: #f9f3e9; /* bege suave */
-      padding: 40px 50px;
-      border-radius: 20px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      line-height: 1.8;
-      color: #3b2f2f;
-    }
 
-    h2.index {
-      text-align: center;
-      color: #7c4b24; /* marrom padaria */
-      font-size: 2em;
-      margin-bottom: 20px;
-      position: relative;
-    }
+/* Animação */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 
-    h2.index::after {
-      content: '';
-      display: block;
-      width: 80px;
-      height: 4px;
-      background-color: #b8864d; /* tom de pão dourado */
-      margin: 10px auto 0;
-      border-radius: 2px;
-    }
+/* Responsividade */
+@media (max-width: 768px) {
+  .historia-box {
+    margin: 0 20px;
+    padding: 25px;
+  }
 
-    p.index {
-      font-size: 1.1em;
-      text-align: justify;
-      margin-bottom: 40px;
-    }
+  .historia-titulo {
+    font-size: 1.5rem;
+  }
 
-    /* Animação suave na rolagem */
-    section {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: all 0.8s ease;
-    }
-
-    section.show {
-      opacity: 1;
-      transform: translateY(0);
-    }
+  .historia-box p {
+    font-size: 1rem;
+  }
+}
