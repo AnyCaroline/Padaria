@@ -724,3 +724,51 @@ nav a:hover {
   color: #5b3b1e;
   margin-bottom: 20px;
 }
+
+
+ section {
+      max-width: 900px;
+      margin: 60px auto;
+      background-color: #f9f3e9; /* bege suave */
+      padding: 40px 50px;
+      border-radius: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      line-height: 1.8;
+      color: #3b2f2f;
+    }
+
+    h2.index {
+      text-align: center;
+      color: #7c4b24; /* marrom padaria */
+      font-size: 2em;
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    h2.index::after {
+      content: '';
+      display: block;
+      width: 80px;
+      height: 4px;
+      background-color: #b8864d; /* tom de pão dourado */
+      margin: 10px auto 0;
+      border-radius: 2px;
+    }
+
+    p.index {
+      font-size: 1.1em;
+      text-align: justify;
+      margin-bottom: 40px;
+    }
+
+    /* Animação suave na rolagem */
+    section {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease;
+    }
+
+    section.show {
+      opacity: 1;
+      transform: translateY(0);
+    }

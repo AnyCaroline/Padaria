@@ -118,3 +118,16 @@ setInterval(() => {
   currentIndex = (currentIndex + 1) % images.length;
   updateCarousel();
 }, 4000);
+
+
+
+// animação de entrada suave na rolagem
+window.addEventListener('scroll', () => {
+  const section = document.querySelector('section');
+  const position = section.getBoundingClientRect().top;
+  const windowHeight = window.innerHeight;
+
+  if (position < windowHeight - 100) {
+    section.classList.add('show');
+  }
+});
